@@ -11,7 +11,7 @@ body {
 }
 
 .l-container__item {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 30px auto;
 }
 
@@ -73,4 +73,111 @@ body {
 .welcome__toggle-checkbox:checked + .welcome__toggle-outline::after {
     right: 21px;
     background-color: hsl(230, 17%, 14%);
+}
+
+/* Media section */
+
+.media {
+    margin: 30px 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 25px;
+}
+
+.media__card {
+    padding: 30px 0 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: hsl(227, 47%, 96%);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 200ms all ease-out;
+}
+
+.media__card:hover {
+    background-color: hsl(227, 37%, 90%);
+}
+
+.media__card--facebook {
+    border-top: 4px solid hsl(208, 92%, 53%);
+}
+
+.media__card--twitter {
+    border-top: 4px solid hsl(203, 89%, 53%);
+}
+
+.media__card--instagram {
+    position: relative;
+}
+
+.media__card--instagram::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 4px;
+    background-image: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+}
+
+.media__card--youtube {
+    border-top: 4px solid hsl(348, 97%, 39%);
+}
+
+.media__info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.media__user {
+    margin-left: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    color: hsl(228, 12%, 44%);
+}
+
+.media__number {
+    font-weight: bold;
+    font-size: 52px;
+    margin: 20px 0 5px;
+}
+
+.media__follower {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: hsl(228, 12%, 44%);
+    letter-spacing: 4px;
+}
+
+.media__status {
+    margin-top: 30px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.media__status--increase {
+    color: hsl(163, 72%, 41%);
+}
+
+.media__status--increase::before {
+    content: url("../images/icon-up.svg");
+    position: relative;
+    top: -2px;
+    left: -1px;
+}
+
+.media__status--decrease {
+    color: hsl(356, 69%, 56%);
+}
+
+.media__status--decrease::before {
+    content: url("../images/icon-down.svg");
+    position: relative;
+    top: -2px;
 }
