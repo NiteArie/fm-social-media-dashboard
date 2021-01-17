@@ -22,6 +22,22 @@ const app = (() => {
         changeWelcomeDescColor();
     })
 
+    _modeSwitcher.addEventListener("focus", (event) => {
+        showModeSwitcherFocus();
+    })
+
+    _modeSwitcher.addEventListener("blur", (event) => {
+        hideModeSwitcherFocus();
+    })
+
+    function showModeSwitcherFocus() {
+        _modeSwitcherOutline.classList.add("welcome__toggle-outline--focus");
+    }
+
+    function hideModeSwitcherFocus() {
+        _modeSwitcherOutline.classList.remove("welcome__toggle-outline--focus");
+    }
+
     function changeBodyTheme() {
         document.body.classList.toggle("body--dark");
     }

@@ -70,6 +70,10 @@ body {
     background-image: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
 }
 
+.welcome__toggle-outline--focus {
+    outline: 3px solid pink;
+}
+
 .welcome__toggle-outline::after {
     content: "";
     position: absolute;
