@@ -70,7 +70,7 @@ body {
     clip: rect(0, 0, 0, 0);
 }
 
-.welcome__toggle-checkbox:checked + .welcome__toggle-outline::after {
+.welcome__toggle-checkbox:checked+.welcome__toggle-outline::after {
     right: 21px;
     background-color: hsl(230, 17%, 14%);
 }
@@ -259,4 +259,14 @@ body {
     content: url("../images/icon-down.svg");
     position: relative;
     top: -2px;
+}
+
+.attribution {
+    padding: 10px;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
 }
