@@ -181,3 +181,82 @@ body {
     position: relative;
     top: -2px;
 }
+
+/* Overview */
+
+.overview {
+    margin-top: 20px;
+}
+
+.overview__title {
+    font-size: 24px;
+    font-weight: bold;
+    color: hsl(228, 12%, 44%);
+}
+
+.overview__cards {
+    margin: 30px 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 20px 25px;
+}
+
+.overview__card {
+    background-color: hsl(227, 47%, 96%);
+    border-radius: 5px;
+    padding: 25px;
+    cursor: pointer;
+}
+
+.overview__card:hover {
+    background-color: hsl(227, 37%, 90%);
+}
+
+.overview__property,
+.overview__numbers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.overview__numbers {
+    margin-top: 20px;
+}
+
+.overview__property-title {
+    color: hsl(228, 12%, 44%);
+    font-weight: bold;
+}
+
+.overview__number-value {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.overview__number-status {
+    align-self: flex-end;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.media__number-status--increase {
+    color: hsl(163, 72%, 41%);
+}
+
+.media__number-status--increase::before {
+    content: url("../images/icon-up.svg");
+    position: relative;
+    top: -2px;
+    left: -1px;
+}
+
+.media__number-status--decrease {
+    color: hsl(356, 69%, 56%);
+}
+
+.media__number-status--decrease::before {
+    content: url("../images/icon-down.svg");
+    position: relative;
+    top: -2px;
+}
