@@ -1,5 +1,9 @@
 # fm-social-media-dashboard (Social Media Dashboard with Theme Switcher)
 
+## Live Preview
+
+Live Version: [https://nitearie.github.io/fm-social-media-dashboard/](https://nitearie.github.io/fm-social-media-dashboard/)
+
 ## Design Preview
 
 > Desktop Dark
