@@ -51,6 +51,10 @@ body {
     color: hsl(228, 12%, 44%);
 }
 
+.welcome__mode--dark {
+    color: inherit;
+}
+
 .welcome__toggle-wrapper {
     width: 40px;
     height: 20px;

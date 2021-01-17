@@ -8,10 +8,12 @@ const app = (() => {
     const _overviewActions = document.querySelectorAll(".overview__property-title");
     const _welcomeDesc = document.querySelector(".welcome__desc");
     const _overviewTitle = document.querySelector(".overview__title");
+    const _modeSwitcherTitle = document.querySelector(".welcome__mode");
 
 
     _modeSwitcher.addEventListener("change", (event) => {
         changeBodyTheme();
+        changeModeSwitcherTitleColor();
         changeModeSwitcherBackground();
         changeMediaCardsBackground();
         changeOverviewCardsBackground();
@@ -29,6 +31,10 @@ const app = (() => {
     _modeSwitcher.addEventListener("blur", (event) => {
         hideModeSwitcherFocus();
     })
+
+    function changeModeSwitcherTitleColor() {
+        _modeSwitcherTitle.classList.toggle("welcome__mode--dark");
+    }
 
     function showModeSwitcherFocus() {
         _modeSwitcherOutline.classList.add("welcome__toggle-outline--focus");
@@ -59,7 +65,7 @@ const app = (() => {
     }
 
     function changeMediaFollowersColor() {
-        Arrray.from(_mediaFollowers).forEach(follower => follower.classList.toggle("media__follower--dark"))
+        Array.from(_mediaFollowers).forEach(follower => follower.classList.toggle("media__follower--dark"))
     }
 
     function changeOverviewActionsColor() {
