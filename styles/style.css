@@ -6,4 +6,71 @@
 
 body {
     font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: hsl(230, 17%, 14%);
+}
+
+.l-container__item {
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+.welcome {
+    display: flex;
+    justify-content: space-between;
+}
+
+.welcome__title {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.welcome__desc {
+    margin: 5px 0;
+    font-weight: bold;
+    color: hsl(228, 12%, 44%);
+}
+
+.welcome__toggle {
+    display: flex;
+    align-items: center;
+}
+
+.welcome__mode {
+    font-weight: bold;
+    color: hsl(228, 12%, 44%);
+}
+
+.welcome__toggle-outline {
+    margin-left: 10px;
+    position: relative;
+    width: 40px;
+    height: 20px;
+    background-image: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.welcome__toggle-outline::after {
+    content: "";
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    bottom: 1px;
+    width: 17px;
+    height: 17px;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 300ms ease-out;
+}
+
+.welcome__toggle-checkbox {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}
+
+.welcome__toggle-checkbox:checked + .welcome__toggle-outline::after {
+    right: 21px;
+    background-color: hsl(230, 17%, 14%);
 }
